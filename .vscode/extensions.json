@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "mashin.mypyright",
+        "ms-python.vscode-pylance",
+        "charliermarsh.ruff",
+        "ms-python.python",
+        "ms-toolsai.jupyter-renderers",
+        "ms-toolsai.jupyter",
+        "tamasfe.even-better-toml",
+    ]
+}

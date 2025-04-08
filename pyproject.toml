@@ -1,0 +1,49 @@
+[project]
+    authors=[{name="Sckathapscal Gorphineus Quantifilius Artificewick des Vents", email="lemagicienquantique@gmail.com"}]
+    dependencies=[
+        "python-dotenv (>=1.0.1,<2.0.0)",
+        "scikit-learn (>=1.6.1,<2.0.0)",
+        "toml (>=0.10.2,<0.11.0)",
+        "transformer-lens (>=2.15.0,<3.0.0)",
+    ]
+    description="Repository of the paper Using Mechanistic Interpretability to Craft Adversarial Attacks against Large Language Models"
+    name="subspace-rerouting"
+    readme="README.md"
+    requires-python=">=3.12,<3.13"
+    version="0.4.0"
+
+[build-system]
+    build-backend="poetry.core.masonry.api"
+    requires=["poetry-core>=2.0.0,<3.0.0"]
+
+[tool.poetry.group.dev]
+    optional=true
+
+    [tool.poetry.group.dev.dependencies]
+        mypy="^1.15.0"
+        ruff="^0.9.10"
+
+[tool.poetry.group.notebook]
+    optional=true
+
+    [tool.poetry.group.notebook.dependencies]
+        ipykernel="^6.29.5"
+        ipywidgets="^8.1.5"
+        jupyter="^1.1.1"
+        matplotlib="^3.10.1"
+        notebook="^7.3.2"
+        plotly="^6.0.0"
+
+[[tool.mypy.overrides]]
+    ignore_missing_imports=true
+    module=[
+        "accelerate.*",
+        "nanogcg.*",
+        "plotly.*",
+        "sklearn.*",
+        "transformer_lens.*",
+        "transformers.*",
+    ]
+
+[tool.pyright]
+    ignore=["accelerate", "nanogcg", "plotly", "sklearn", "transformer_lens", "transformers"]
