@@ -11,7 +11,6 @@ import torch as t
 import transformer_lens as tl
 from IPython.display import display
 from jaxtyping import Float, Int
-from reproduce_experiments.plot import imshow  # type: ignore
 from sklearn.decomposition import PCA
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import cross_validate
@@ -428,10 +427,7 @@ def compute_head_contribution(
     gc.collect()
     t.cuda.empty_cache()
 
-    if plot:
-        imshow(attn_contrib)
-    else:
-        return attn_contrib
+    return attn_contrib
 
 
 def logit_lens(
