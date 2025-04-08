@@ -1,7 +1,7 @@
 # TP _Causapscal des Vents_
 
 ## Installation
-> Python 3.12 (ou 3.13 à vos risques et périls)
+> Python 3.12 (ou 3.13 à vos risques et périls (devrait marcher tho))
 
 **Préparez l'environment:**
 
